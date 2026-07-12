@@ -1,119 +1,215 @@
 # IIIT-PUNE-ACM-SIGCHI-2026
 
-# 📦 [Project Name - TBA]
+# 📦 [Project Name - TBA] : The Adaptive Intelligence Interface Runtime
 
-### The Adaptive Intelligence Interface Runtime
+[![Architecture](https://img.shields.io/badge/Architecture-Generative_UI-blueviolet)](#)
+[![Hackathon](https://img.shields.io/badge/Status-36h_MVP-green)](#)
+[![Theme](https://img.shields.io/badge/Focus-Human_Centered_Design-orange)](#)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#)
 
-[![Stack](https://img.shields.io/badge/Architecture-Generative--UI-blueviolet)](#)
-[![Hackathon](https://img.shields.io/badge/Status-36h--MVP-green)](#)
-[![Infrastructure](https://img.shields.io/badge/Layer-Interaction--Infrastructure-blue)](#)
-
-Current AI systems are rapidly scaling intelligence, but the way humans interact with that intelligence is broken. Every modern AI application—from ChatGPT to custom enterprise solutions—forces users into the exact same interaction paradigm:
-
-$$\text{User} \longrightarrow \text{Prompt} \longrightarrow \text{LLM Engine} \longrightarrow \text{Static Text Response}$$
-
-This text-based layout works well for transactional Q&A but fails catastrophically for complex cognitive tasks like research, contextual learning, cross-variable planning, and multi-attribute decision-making. Humans do not naturally process complex problems in linear, scrolling paragraphs of text; we think using **spatial structures, directional mind maps, comparative matrices, and temporal timelines.**
-
-**[Project Name - TBA]** is not another wrapper application. It is **Interaction Layer Infrastructure**. It sits directly below the application layer, dynamically routing human intent into tailor-made, intelligent graphical interfaces computed on the fly.
+> **The next decade of AI is not about building smarter models. It is about building better ways for humans to interact with them.**
 
 ---
 
-# 🏗️ System Architecture
+# 📖 Table of Contents
 
-The runtime intercepts the user's workflow, bypassing standard conversational generation to evaluate and build a structured interaction sandbox:
+1. [The Core Problem: The Chatbot Paradigm is Broken](#1-the-core-problem-the-chatbot-paradigm-is-broken)
+2. [What is [Project Name]?](#2-what-is-project-name)
+3. [Deep System Architecture](#3-deep-system-architecture)
+4. [The 36-Hour Hackathon MVP Scope](#4-the-36-hour-hackathon-mvp-scope)
+5. [Hackathon Evaluation Mapping](#5-hackathon-evaluation-mapping)
+6. [Technology Stack](#6-technology-stack)
+7. [The 12-Month Platform Vision](#7-the-12-month-platform-vision)
+8. [Local Development Setup](#8-local-development-setup)
 
-```text
-                      [ Raw User Input / Voice ]
-                                  │
-                                  ▼
-                     ┌─────────────────────────┐
-                     │  Intent Routing Engine  │  (Foundational LLM Evaluator)
-                     └─────────────────────────┘
-                                  │
-                                  ▼
-                     ┌─────────────────────────┐
-                     │ Strict JSON State Spec  │  (Confidence, Type, Attributes)
-                     └─────────────────────────┘
-                                  │
-                                  ▼
-                     ┌─────────────────────────┐
-                     │     Runtime Engine      │  (Dynamic Component Rehydration)
-                     └─────────────────────────┘
-                                  │
-         ┌────────────────────────┼────────────────────────┐
-         ▼                        ▼                        ▼
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│   Learning UI   │      │   Decision UI   │      │   Research UI   │
-│  (React Flow)   │      │ (Custom Matrix) │      │ (Directed Graph)│
-└─────────────────┘      └─────────────────┘      └─────────────────┘
-         │                        │                        │
-         └────────────────────────┼────────────────────────┘
-                                  │
-                                  ▼
-                     ┌─────────────────────────┐
-                     │ Multi-Agent Coordination│
-                     │ (Fact Checker & Critic) │
-                     └─────────────────────────┘
-                                  │
-                                  ▼
-                     ┌─────────────────────────┐
-                     │ Explainability Engine   │
-                     │ Source Tracing Layer    │
-                     └─────────────────────────┘
+---
+
+# 1. The Core Problem: The Chatbot Paradigm is Broken
+
+Almost every modern AI application—from standard ChatGPT to custom enterprise wrappers—forces users into the exact same interaction model:
+
+```
+User Prompt
+      │
+      ▼
+LLM Processing
+      │
+      ▼
+Static Text Response
+```
+
+While this works for simple Q&A, it fundamentally fails for complex cognitive workflows.
+
+Humans do **not** naturally process complex information through endless scrolling conversations.
+
+Instead, humans think using:
+
+- Spatial structures
+- Comparative matrices
+- Directed graphs
+- Mind maps
+- Timelines
+- Whiteboards
+- Visual relationships
+
+Current AI forces users to convert every thought into paragraphs.
+
+This creates unnecessary cognitive overload.
+
+The bottleneck in AI is no longer model intelligence.
+
+**The bottleneck is the interface.**
+
+---
+
+# 2. What is [Project Name]?
+
+**[Project Name] is not another AI application.**
+
+It is **Adaptive Intelligence Interface Infrastructure.**
+
+Instead of generating text,
+
+the runtime understands **what the user is trying to accomplish** and dynamically builds the most suitable workspace.
+
+For example:
+
+Learning
+
+↓
+
+Mind Map
+
+Research
+
+↓
+
+Knowledge Graph
+
+Decision Making
+
+↓
+
+Comparison Matrix
+
+Planning
+
+↓
+
+Timeline
+
+Coding
+
+↓
+
+Developer Workspace
+
+The interface adapts to the human.
+
+Not the other way around.
+
+---
+
+# 3. Deep System Architecture
+
+The runtime executes a four-stage adaptive pipeline.
+
+```
+                      Raw User Input
+                             │
+                             ▼
+                 Intent Routing Engine
+                             │
+                             ▼
+              Structured Runtime JSON Schema
+                             │
+                             ▼
+               Adaptive Interface Runtime
+                             │
+      ┌──────────────────────┼──────────────────────┐
+      ▼                      ▼                      ▼
+ Learning UI           Decision UI          Research UI
+      │                      │                      │
+      └──────────────────────┼──────────────────────┘
+                             ▼
+              Multi-Agent Coordination Layer
+                             │
+                             ▼
+                 Explainability Engine
 ```
 
 ---
 
-# ⚙️ How It Works (Lifecycle)
+## Step 1 — Intent Routing Engine
 
-## 1. Intent Detection & Semantic Routing
+The prompt is **not** immediately answered.
 
-When a prompt is sent, it is analyzed by a semantic classification layer.
+Instead,
 
-Instead of generating a paragraph, the LLM returns a structured control payload.
+the LLM behaves as an Intent Router.
+
+Its only responsibility is identifying
+
+- what the user wants
+- which interface should be generated
+- confidence level
+
+---
+
+## Step 2 — Structured Runtime State
+
+Instead of paragraphs,
+
+the model returns a strict JSON specification.
+
+Example:
 
 ```json
 {
   "detected_intent": "decision",
   "target_interface": "comparison_matrix",
-  "routing_confidence": 0.96,
-  "payload": {
+  "confidence_score": 0.94,
+  "data_payload": {
     "entities": [
-      "pgvector",
-      "Pinecone",
-      "Milvus"
+      "PostgreSQL",
+      "MongoDB"
     ],
-    "dimensions": [
-      "Query Latency",
-      "Storage Cost",
-      "Index Types",
-      "Self Hosting"
-    ]
+    "metrics": [
+      "ACID Compliance",
+      "Schema Flexibility",
+      "Horizontal Scaling"
+    ],
+    "summary": "PostgreSQL is ideal for transactional workloads while MongoDB provides flexibility for document-centric systems."
   }
 }
 ```
 
 ---
 
-## 2. Runtime UI Rehydration
+## Step 3 — Dynamic Interface Rehydration
 
-The frontend Runtime receives this JSON and dynamically mounts the correct interface instead of rendering another chat response.
+The frontend runtime consumes the JSON payload.
 
-Examples:
+Instead of rendering another chat bubble,
 
-- Mind Maps
-- Knowledge Graphs
-- Comparison Matrices
-- Timelines
-- Whiteboards
+the Runtime mounts a completely different interface.
 
-Transitions happen with smooth animations while preserving context.
+Examples include:
+
+- Comparison Matrix
+- Mind Map
+- Knowledge Graph
+- Timeline
+- Whiteboard
+- Interactive Cards
+
+Smooth transitions are powered using Framer Motion while maintaining workspace continuity.
 
 ---
 
-## 3. Multi-Agent Evaluation
+## Step 4 — Explainability Layer
 
-Each workspace activates specialized reasoning agents.
+Every generated interface is enhanced by specialized AI agents.
 
 ### Research Agent
 
@@ -121,7 +217,7 @@ Collects structured information.
 
 ### Planner Agent
 
-Creates execution plans.
+Breaks goals into milestones.
 
 ### Teacher Agent
 
@@ -129,144 +225,332 @@ Explains concepts.
 
 ### Critic Agent
 
-Finds weaknesses and trade-offs.
+Identifies weaknesses and trade-offs.
 
 ### Fact Verification Agent
 
-Cross-checks information against trusted sources.
+Cross-checks generated information.
 
 ### Accessibility Agent
 
-Optimizes layouts for different users.
+Optimizes interface for different users.
 
----
-
-## 4. Explainability Layer
-
-Every generated component contains:
+Each UI element can reveal:
 
 - Confidence Score
 - Supporting Evidence
 - Sources
 - Alternative Suggestions
-- Hallucination Warnings
-
-Clicking any element reveals why it was generated.
 
 ---
 
-# 🛠️ Core Technology Stack
+# 4. The 36-Hour Hackathon MVP Scope
 
-## Frontend
+The prototype demonstrates three adaptive interfaces.
 
-- Next.js
-- React
+---
+
+## 🧠 Learning Intent
+
+Example Prompt
+
+> Teach me the basics of Neural Networks.
+
+Generated Interface
+
+- Interactive Mind Map
+- Learning Path
+- Concept Relationships
+
+Why?
+
+Learning is easier through connected visual structures than long paragraphs.
+
+---
+
+## ⚖️ Decision Intent
+
+Example Prompt
+
+> Should I use React or Flutter for my startup?
+
+Generated Interface
+
+- Dynamic Comparison Matrix
+- Pros & Cons
+- Technical Trade-offs
+- Recommendation Summary
+
+Why?
+
+Decision-making benefits from structured comparisons instead of essays.
+
+---
+
+## 🔬 Research Intent
+
+Example Prompt
+
+> Map the ecosystem of autonomous AI agents.
+
+Generated Interface
+
+- Interactive Knowledge Graph
+- GitHub Repositories
+- Research Papers
+- Companies
+- Related Technologies
+
+Why?
+
+Research is fundamentally exploratory and benefits from graph-based navigation.
+
+---
+
+# 5. Hackathon Evaluation Mapping
+
+## Human-Centered Design
+
+Instead of overwhelming users with long responses,
+
+the runtime generates interfaces aligned with natural human cognition.
+
+---
+
+## Explainability & Trust
+
+Every recommendation contains:
+
+- Confidence Score
+- Source Citation
+- Supporting Evidence
+- Alternative Suggestions
+
+---
+
+## Accessibility
+
+The runtime adapts to different users.
+
+Examples:
+
+- Voice Input
+- Regional Languages
+- Screen Readers
+- Large Text
+- High Contrast Mode
+- Text-to-Speech
+
+---
+
+## Innovation
+
+Instead of moving from
+
+Prompt → Better Text
+
+the project explores
+
+Intent → Better Interface
+
+This shifts AI interaction from **Generative Text** toward **Generative Interfaces**.
+
+---
+
+# 6. Technology Stack
+
+## Frontend Runtime
+
+- Next.js 14
+- React 18
 - TypeScript
 - Tailwind CSS
-- React Flow
 - Framer Motion
+- React Flow
+
+---
 
 ## Backend
 
 - FastAPI
 - Python
+- Pydantic
 
-## AI
+---
 
-- Gemini API
-- OpenAI API (optional)
+## AI Pipeline
+
+- Google Gemini API
+- Structured JSON Output
+- Intent Classification
+- Prompt Routing
+
+---
 
 ## Database
 
 - PostgreSQL
-- Redis
+- Redis (Future)
 
-## Authentication
-
-- Clerk / Firebase Auth
+---
 
 ## Deployment
 
 - Vercel
 - Railway
-- Supabase
+- Docker
 
 ---
 
-# 🚀 36-Hour Hackathon Scope
+# 7. The 12-Month Platform Vision
 
-The MVP demonstrates the complete Runtime architecture through three adaptive interfaces.
+We are not building an application.
 
-| Intent | Generated Interface | Example |
-|---------|--------------------|---------|
-| Learning | Mind Map | "Teach me Neural Networks." |
-| Decision | Comparison Matrix | "Compare AWS vs Azure." |
-| Research | Knowledge Graph | "Research AI Infrastructure." |
-
-The objective is **not** to build dozens of interfaces.
-
-The objective is to prove that one Runtime can dynamically generate multiple interaction environments based on user intent.
+We are building an interaction platform.
 
 ---
 
-# 📈 Future Roadmap
+## Phase 1 (0–3 Months)
 
-## 🚀 Phase 1 (Hackathon)
+Adaptive Runtime MVP
 
-- Intent Detection
-- Runtime Engine
-- Learning Interface
-- Decision Interface
-- Research Interface
-- Explainability Layer
-
----
-
-## 🏢 Phase 2 (3 Months)
-
-- User Authentication
-- Workspace Saving
-- Collaboration
-- Memory
-- Voice Interaction
-- Accessibility Improvements
+- Intent Routing
+- Learning UI
+- Research UI
+- Decision UI
+- Explainability
 
 ---
 
-## 🏗️ Phase 3 (6 Months)
+## Phase 2 (3–6 Months)
 
-### Runtime SDK
+Developer SDK
 
-Developers can install:
+Developers install
 
 ```bash
 npm install runtime-sdk
 ```
 
-and generate adaptive interfaces inside their own AI applications.
+and immediately integrate adaptive interfaces into their own AI products.
 
 ---
 
-## 🌌 Phase 4 (12 Months)
+## Phase 3 (6–12 Months)
 
-ATLAS evolves into a complete Interface Infrastructure Platform.
+Platform Infrastructure
 
-Applications built on top of the Runtime automatically receive:
+Enterprise developers build domain-specific plugins.
 
-- Adaptive UI Generation
-- Intent Routing
-- Explainability
-- Accessibility
-- Multi-Agent Orchestration
-- Knowledge Workspaces
+Examples:
 
-without building those systems from scratch.
+Healthcare
+
+↓
+
+Medical Timelines
+
+Education
+
+↓
+
+Learning Graphs
+
+Legal
+
+↓
+
+Case Timelines
+
+Finance
+
+↓
+
+Risk Dashboards
+
+Software Engineering
+
+↓
+
+Architecture Visualizers
 
 ---
 
-# 💡 Engineering Philosophy
+## Long-Term Vision
 
-Modern AI applications generate better answers.
+Instead of building another AI application,
+
+we aim to build the interaction infrastructure powering future AI applications.
+
+---
+
+# 8. Local Development Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-org/project-name.git
+```
+
+---
+
+## Frontend
+
+```bash
+cd client
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Backend
+
+```bash
+cd server
+
+python -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside `/server`
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+## Run Development Servers
+
+Backend
+
+```bash
+uvicorn main:app --reload
+```
+
+Frontend
+
+```bash
+npm run dev
+```
+
+---
+
+# 🚀 Project Philosophy
+
+Today's AI systems generate better answers.
 
 This project explores a different direction.
 
@@ -276,24 +560,24 @@ it generates better ways for humans and AI to think together.
 
 Rather than asking:
 
-> "What should the AI say?"
+> **"What should the AI say?"**
 
 The Runtime asks:
 
-> "What interface would help the user solve this problem?"
+> **"What interface will help the user solve this problem most effectively?"**
 
 ---
 
-# 🎯 Vision
+# 🌍 Vision Statement
 
-We believe the next evolution of AI will not be defined by larger models.
+We believe the next generation of AI will not be defined solely by larger language models.
 
-It will be defined by better interaction.
+It will be defined by more natural, adaptive, and human-centered interaction.
 
 Just as graphical user interfaces transformed computing,
 
 Adaptive Intelligence Interfaces have the potential to transform how humans collaborate with AI.
 
-Instead of forcing every task into a chat window,
+Rather than forcing every workflow into a scrolling chat window,
 
-this project explores a future where AI dynamically builds the right workspace for the way humans naturally think.
+our vision is to build an intelligent runtime capable of dynamically creating the right workspace for the way people naturally think, learn, decide, and create.
